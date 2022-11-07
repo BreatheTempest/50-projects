@@ -1,22 +1,25 @@
 ---
 import { projects } from '../data/projects-data';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<h1 class="bg-indigo-700 text-stone-200 text-3xl text-center p-4">
-	50 Projects in 50 Days
-</h1>
-<div class="">
-	{
-		projects.map((project, i) => (
-			<a
-				class={`flex items-center p-4 gap-4 ${
-					i % 2 === 0 ? 'bg-amber-100' : 'bg-amber-200'
-				}`}
-				href={`/${project.slug}`}
-			>
-				<span>Day {project.day}:</span>
-				<h2 class="text-xl"> {project.name}</h2>
-			</a>
-		))
-	}
-</div>
+<Layout>
+	<h1 class="bg-indigo-700 text-stone-200 text-3xl text-center p-4">
+		50 Projects in 50 Days
+	</h1>
+	<div class="">
+		{
+			projects.map((project, i) => (
+				<a
+					class={`flex items-center p-4 gap-4 ${
+						i % 2 === 0 ? 'bg-amber-100' : 'bg-amber-200'
+					}`}
+					href={`/${project.slug}`}
+				>
+					<span>Day {project.day}:</span>
+					<h2 class="text-xl"> {project.name}</h2>
+				</a>
+			))
+		}
+	</div>
+</Layout>

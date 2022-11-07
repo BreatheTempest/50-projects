@@ -1,1 +1,8 @@
-<h1>Movie</h1>
+---
+import App from '../components/movie-app/App.jsx';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Movie App">
+	<App client:visible />
+</Layout>
