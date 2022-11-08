@@ -5,4 +5,39 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Movie App">
 	<App client:visible />
+	<!-- <div class="container">
+		<img
+			src="https://image.tmdb.org/t/p/w1280/kjFDIlUCJkcpFxYKtE6OsGcAfQQ.jpg"
+			alt=""
+		/>
+		<div class="text">
+			<h1>Blah Blah</h1>
+			<p>9.5</p>
+		</div>
+	</div> -->
 </Layout>
+
+<style>
+	.container {
+		width: 300px;
+		background-color: beige;
+		height: 400px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.container img {
+		background-size: cover;
+		object-fit: cover;
+		width: 100%;
+		height: 90%;
+	}
+	.text {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	h1 {
+		font-size: 1rem;
+	}
+</style>
